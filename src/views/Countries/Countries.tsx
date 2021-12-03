@@ -1,7 +1,7 @@
 import React from "react";
 
 const Countries = () => {
-  return <div className="container">COUNTRIES</div>;
+  return <div>COUNTRIES</div>;
 };
 
 export default Countries;

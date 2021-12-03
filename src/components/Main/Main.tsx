@@ -6,10 +6,12 @@ import { Countries } from "../../views/Countries";
 const Main = () => {
   return (
     <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/countries" element={<Countries />} />
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/countries" element={<Countries />} />
+        </Routes>
+      </div>
     </main>
   );
 };
