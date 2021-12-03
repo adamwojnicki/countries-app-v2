@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className="container">
-        <nav>
+        <nav className={styles.nav}>
           <div className="logo">APP LOGO</div>
-          <ul>
-            <li>
+          <ul className={styles.ul}>
+            <li className={styles.li}>
               <Link to="/">home</Link>
             </li>
-            <li>
+            <li className={styles.li}>
               <Link to="/countries">countries</Link>
             </li>
           </ul>
