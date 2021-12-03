@@ -7,7 +7,11 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <nav className={styles.nav}>
-          <div className="logo">APP LOGO</div>
+          <div className="logo">
+            <Link to="/">
+              <h1>APP LOGO</h1>
+            </Link>
+          </div>
           <ul className={styles.ul}>
             <li className={styles.li}>
               <Link to="/">home</Link>
