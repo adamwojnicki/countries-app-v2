@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import styles from "./CountryList.module.css";
 
 interface Country {
   cca3: String;
+  name: {
+    common: String;
+  };
 }
 
 export default class CountryList extends Component {
@@ -16,9 +20,9 @@ export default class CountryList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className={styles.grid}>
         {this.state.countries.map((country: Country) => (
-          <p>{country.cca3}</p>
+          <p>{country.name.common}</p>
         ))}
       </div>
     );
