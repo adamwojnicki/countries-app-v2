@@ -5,7 +5,7 @@ import { Countries } from "../../views/Countries";
 
 const Main = () => {
   return (
-    <main>
+    <main data-testid="main">
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
