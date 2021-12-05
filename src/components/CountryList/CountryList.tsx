@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { CountryCard } from "../CountryCard";
 import styles from "./CountryList.module.css";
 
 interface Country {
-  cca3: String;
+  cca3: KeyType;
   name: {
     common: String;
   };
+  flags: { svg: string };
 }
 
 export default class CountryList extends Component {
@@ -18,11 +20,13 @@ export default class CountryList extends Component {
       .get<Country[]>("https://restcountries.com/v3.1/all")
       .then((res) => this.setState({ countries: res.data }));
   }
+
   render() {
+    console.log(this.state);
     return (
       <div className={styles.grid}>
         {this.state.countries.map((country: Country) => (
-          <p>{country.name.common}</p>
+          <CountryCard key={country.cca3} country={country} />
         ))}
       </div>
     );
